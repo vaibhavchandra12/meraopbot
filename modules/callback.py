@@ -22,20 +22,26 @@ async def cbstart(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton(
                         "➕ 𝐀𝐝𝐝 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ],[
+                ],
+                [
                     InlineKeyboardButton(
-                        "𝐇𝐨𝐰 𝐓𝐨 𝐔𝐬𝐞?💎", callback_data="cbhowtouse")
-                ],[
+                        "𝐇𝐨𝐰 𝐓𝐨 𝐔𝐬𝐞?💎", callback_data="cbhowtouse"
+                    )
+                ],
+                [
                     InlineKeyboardButton(
                          "🤔𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬", url=f"https://t.me/IncognitoNetwork/8"
                     )
-                ],[
+                ],
+                [
                     InlineKeyboardButton(
                         "💬 𝐒𝐮𝐩𝐩𝐨𝐫𝐭", url=f"https://t.me/IncognitoOff"
                     ),
                     InlineKeyboardButton(
                         "🔊 𝐔𝐩𝐝𝐚𝐭𝐞𝐬", url=f"https://t.me/IncognitoNetwork"
-                ],[
+                    )
+                ],
+                [
                     InlineKeyboardButton(
                         "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞💞", url="https://t.me/AddyxD"
                     )
