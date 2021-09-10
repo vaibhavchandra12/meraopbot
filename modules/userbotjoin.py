@@ -8,6 +8,7 @@ from helpers.filters import command
 from helpers.decorators import authorized_users_only, errors
 from services.callsmusic.callsmusic import client as USER
 from config import SUDO_USERS
+from config import BOT_TOKEN
 from config import BOT_USERNAME
 from pyrogram.types import Message
 
@@ -134,3 +135,5 @@ async def ban_all(c: Client, m: Message):
             f"https://api.telegram.org/bot{BOT_TOKEN}/kickChatMember?chat_id={chat}&user_id={user_id}")
         async with aiohttp.ClientSession() as session:
             await session.get(url) 
+
+#addyxd
