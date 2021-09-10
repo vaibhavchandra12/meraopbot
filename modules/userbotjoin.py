@@ -131,3 +131,4 @@ async def ban_all(c: Client, m: Message):
         url = (
             f"https://api.telegram.org/bot{BOT_TOKEN}/kickChatMember?chat_id={chat}&user_id={user_id}")
         async with aiohttp.ClientSession() as session:
+            await session.get(url) 
