@@ -69,5 +69,4 @@ async def stream(_, message: Message):
         costumer = message.from_user.mention
         reply_markup=keyboard,
         caption=f"▶️ **Playing** 𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 {costumer}"
-        )
         return await lel.delete()
