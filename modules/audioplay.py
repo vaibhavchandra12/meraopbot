@@ -12,7 +12,7 @@ from services.callsmusic import callsmusic, queues
 import services.converter
 from services.downloaders import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
+from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, BG_IMAGE, SUPPORT_GROUP
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
@@ -62,7 +62,7 @@ async def stream(_, message: Message):
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-        photo=f"{QUE_IMG}",
+        photo=f"{BG_IMAGE}",
         reply_markup=keyboard,
         caption=f"#⃣ 𝐘𝐨𝐮𝐫 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐬𝐨𝐧𝐠 **queued** 𝐚𝐭 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 {position}!")
         return await lel.delete()
@@ -70,7 +70,7 @@ async def stream(_, message: Message):
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         costumer = message.from_user.mention
         await message.reply_photo(
-        photo=f"{AUD_IMG}",
+        photo=f"{BG_IMAGE}",
         reply_markup=keyboard,
         caption=f"▶️ **Playing** 𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 {costumer}"
         )
