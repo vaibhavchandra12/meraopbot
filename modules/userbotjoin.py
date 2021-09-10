@@ -9,6 +9,8 @@ from helpers.decorators import authorized_users_only, errors
 from services.callsmusic.callsmusic import client as USER
 from config import SUDO_USERS
 from config import BOT_USERNAME
+from pyrogram.types import Message
+
 
 @Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
 @errors
