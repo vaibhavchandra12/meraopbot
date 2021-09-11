@@ -3,6 +3,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
+import aiohttp
 from aiohttp import ClientSession
 from helpers.filters import command
 from helpers.decorators import authorized_users_only, errors
