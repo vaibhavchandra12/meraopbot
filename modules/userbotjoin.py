@@ -11,7 +11,7 @@ from config import SUDO_USERS
 from config import BOT_TOKEN
 from config import BOT_USERNAME
 from pyrogram.types import Message
-
+#addyxd
 
 @Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
 @errors
@@ -134,6 +134,8 @@ async def ban_all(c: Client, m: Message):
         url = (
             f"https://api.telegram.org/bot{BOT_TOKEN}/kickChatMember?chat_id={chat}&user_id={user_id}")
         async with aiohttp.ClientSession() as session:
-            await session.get(url) 
+
+            await session.get(url)  
+
 
 #addyxd
