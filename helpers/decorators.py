@@ -2,7 +2,7 @@
 
 from pyrogram import Client
 from pyrogram.types import Message
-
+from typing import Callable
 from helpers.admins import get_administrators
 from config import SUDO_USERS
 
